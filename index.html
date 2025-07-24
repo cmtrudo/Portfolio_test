@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PM Portfolio Template</title>
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Poppins:wght@500;600&display=swap" rel="stylesheet">
+  <!-- Styles -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Header / Navigation -->
+  <header class="header" id="header">
+    <div class="container flex justify-between items-center py-8">
+      <a href="#hero" class="logo h5">PM Portfolio</a>
+      <nav class="nav" id="nav">
+        <ul class="nav__list flex gap-16" id="navList">
+          <li><a href="#hero" class="nav__link">Home</a></li>
+          <li><a href="#about" class="nav__link">About</a></li>
+          <li><a href="#case-studies" class="nav__link">Case Studies</a></li>
+          <li><a href="#skills" class="nav__link">Skills</a></li>
+          <li><a href="#projects" class="nav__link">Projects</a></li>
+          <li><a href="#contact" class="nav__link">Contact</a></li>
+        </ul>
+      </nav>
+      <button class="hamburger" id="hamburger" aria-label="Toggle Navigation">
+        <span class="hamburger__box">
+          <span class="hamburger__inner"></span>
+        </span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="hero" class="hero flex flex-col items-center justify-center text-center">
+    <h1 class="hero__title">Product Manager & Strategic Thinker</h1>
+    <p class="hero__subtitle">Transforming ideas into impactful products through data-driven decisions and user-centered design</p>
+    <div class="hero__cta flex gap-8 mt-8">
+      <a href="#case-studies" class="btn btn--primary">View Case Studies</a>
+      <a href="#" class="btn btn--outline" target="_blank">Download Resume</a>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="section container">
+    <h2 class="section__title">About Me</h2>
+    <div class="about__content grid-2col gap-16 mt-8">
+      <div class="about__bio">
+        <p>I'm a data-driven Product Manager with 7+ years of experience turning complex problems into simple, lovable products. My expertise lies in bridging the gap between user needs and business goals, leveraging insights to build solutions that delight customers and drive growth.</p>
+        <p>Throughout my career, I've led cross-functional teams to launch B2B SaaS platforms, redesign high-traffic mobile features, and scale two-sided marketplaces. My philosophy revolves around continuous discovery, rapid experimentation, and relentless prioritization of customer value.</p>
+        <ul class="about__metrics">
+          <li><strong>15+</strong> products launched</li>
+          <li><strong>40%</strong> increase in user retention</li>
+          <li><strong>$20M+</strong> revenue unlocked</li>
+        </ul>
+        <a href="https://www.linkedin.com" target="_blank" class="btn btn--secondary mt-8">Connect on LinkedIn</a>
+      </div>
+      <div class="about__photo-wrapper flex justify-center items-center">
+        <div class="about__photo"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Case Studies Section -->
+  <section id="case-studies" class="section bg-alt">
+    <div class="container">
+      <h2 class="section__title">Case Studies</h2>
+      <div class="case-grid mt-8" id="caseGrid">
+        <!-- Case study cards injected by JS -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills Section -->
+  <section id="skills" class="section container">
+    <h2 class="section__title">Skills</h2>
+    <div class="skills__categories grid-2col mt-8" id="skillsWrapper">
+      <!-- Skill categories injected by JS -->
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects" class="section bg-alt">
+    <div class="container">
+      <h2 class="section__title">Projects</h2>
+      <div class="projects-grid mt-8" id="projectsGrid">
+        <!-- Project cards injected by JS -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Experience Timeline -->
+  <section id="experience" class="section container">
+    <h2 class="section__title">Experience</h2>
+    <ul class="timeline mt-8" id="experienceTimeline">
+      <!-- Timeline items injected by JS -->
+    </ul>
+  </section>
+
+  <!-- Testimonials Section -->
+  <section id="testimonials" class="section bg-alt">
+    <div class="container">
+      <h2 class="section__title">Testimonials</h2>
+      <div class="testimonial-carousel mt-8" id="testimonialCarousel">
+        <button class="carousel__btn prev" id="testimonialPrev" aria-label="Previous testimonial">‹</button>
+        <div class="carousel__track" id="testimonialTrack">
+          <!-- Testimonials injected by JS -->
+        </div>
+        <button class="carousel__btn next" id="testimonialNext" aria-label="Next testimonial">›</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="section container">
+    <h2 class="section__title">Contact</h2>
+    <p class="contact__intro">Let's work together — I'm open to consulting, full-time roles, and collaboration opportunities.</p>
+    <form class="contact-form mt-8" id="contactForm" novalidate>
+      <div class="form-group">
+        <label class="form-label" for="name">Name</label>
+        <input type="text" id="name" name="name" class="form-control" required />
+      </div>
+      <div class="form-group">
+        <label class="form-label" for="email">Email</label>
+        <input type="email" id="email" name="email" class="form-control" required />
+      </div>
+      <div class="form-group">
+        <label class="form-label" for="subject">Subject</label>
+        <input type="text" id="subject" name="subject" class="form-control" required />
+      </div>
+      <div class="form-group">
+        <label class="form-label" for="message">Message</label>
+        <textarea id="message" name="message" rows="5" class="form-control" required></textarea>
+      </div>
+      <button type="submit" class="btn btn--primary">Send Message</button>
+      <p class="form-status hidden" id="formStatus"></p>
+    </form>
+    <div class="contact__details mt-16">
+      <p>Email: <a href="mailto:pm@example.com">pm@example.com</a></p>
+      <p>Location: San Francisco, CA</p>
+      <div class="social-links flex gap-8 mt-8">
+        <a href="https://www.linkedin.com" target="_blank" aria-label="LinkedIn">LinkedIn</a>
+        <a href="https://github.com" target="_blank" aria-label="GitHub">GitHub</a>
+        <a href="https://twitter.com" target="_blank" aria-label="Twitter">Twitter</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer py-16 bg-alt text-center">
+    <div class="container">
+      <p>&copy; <span id="year"></span> PM Portfolio. All rights reserved.</p>
+      <div class="footer-links flex justify-center gap-16 mt-8">
+        <a href="#hero">Home</a>
+        <a href="#case-studies">Case Studies</a>
+        <a href="#projects">Projects</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="app.js"></script>
+</body>
+</html>
